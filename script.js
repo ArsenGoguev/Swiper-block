@@ -1,4 +1,4 @@
-let slider = document.querySelector('.brands-block');
+/*let slider = document.querySelector('.brands');
 
 function mobileSlider () {
 	if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
@@ -6,7 +6,7 @@ function mobileSlider () {
 			direction: 'horizontal',
 			slidesPerView: 'auto',
 			spaceBetween: 20,
-			slideClass: 'brand-cards__brand',
+			slideClass: 'brands__brand',
 			loop: true,
 			pagination: {
 				el: '.swiper-pagination',
@@ -18,7 +18,7 @@ function mobileSlider () {
 
 	if (window.innerWidth >= 768) {
 		slider.dataset.mobile = 'false';
-		if (slider.classList.contains('brands-block-initialized')) {
+		if (slider.classList.contains('brands-initialized')) {
 			mySwiper.destroy();
 		}
 	}
@@ -28,14 +28,14 @@ function mobileSlider () {
 mobileSlider();
 
 
-window.addEventListener('resize', () => {
+window.addEventListener('DOMContentLoaded', () => {
   mobileSlider();
-});
+});*/
 
 
 let openMoreButton = document.querySelector('.open-more');
 let brandCards = document.querySelector('.swiper-wrapper');
-let disabledElements = brandCards.querySelectorAll('.brand-cards__brand--hidden');
+let disabledElements = brandCards.querySelectorAll('.brands__brand--hidden');
 let buttonName = openMoreButton.querySelector('.open-more__text');
 
 
@@ -47,24 +47,24 @@ openMoreButton.addEventListener('click', function (evt) {
 
 
 function openMoreBrands (elements, hiddenElements, button) {
-	if (button.textContent === 'Показать все') {
+	if (button.innerText === 'Показать все') {
 		for (let i = 0; i < elements.length; i++) {
-			if ( elements[i].classList.contains('brand-cards__brand--hidden') ) {
-				elements[i].classList.remove('brand-cards__brand--hidden');
+			if ( elements[i].classList.contains('brands__brand--hidden') ) {
+				elements[i].classList.remove('brands__brand--hidden');
 			}
 		}
-		button.textContent = 'Скрыть';
+		button.innerText = 'Скрыть';
 	} else {
 		if (window.innerWidth >= 1120) {
 			for (let i = 2; i < hiddenElements.length; i++) {
-				hiddenElements[i].classList.add('brand-cards__brand--hidden');
+				hiddenElements[i].classList.add('brands__brand--hidden');
 			}
 		} else {
 			for (let i = 0; i < hiddenElements.length; i++) {
-				hiddenElements[i].classList.add('brand-cards__brand--hidden');
+				hiddenElements[i].classList.add('brands__brand--hidden');
 			}
 		}
-		button.textContent = 'Показать все';
+		button.innerText = 'Показать все';
 	}
 }
 
@@ -74,6 +74,6 @@ if (window.innerWidth >= 1120) {
 
 	for (let i = 6; i < 8; i++) {
 		let disabledElement = cardList[i];
-		disabledElement.classList.remove('brand-cards__brand--hidden');
+		disabledElement.classList.remove('brands__brand--hidden');
 	}
 }
