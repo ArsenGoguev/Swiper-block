@@ -50,8 +50,6 @@ body {
 	text-transform: uppercase;
 }
 
-
-
 .brands__brand {
 	flex: none;
 	margin: 16px 0;
@@ -153,28 +151,22 @@ body {
 }
 
 @media screen and (1120px > width >= 768px) {
-
 	.brands-header {
 		padding: 16px 24px;
 		background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
 	}
 
-	.brands {
-		padding-right: 24px;
-	}
-
 	.swiper-wrapper {
+		width: auto;
 		display: flex;
-		padding: 24px;
-		padding-left: 0;
+		padding: 24px 24px 8px 0;
 		flex-wrap: wrap;
 		overflow-y: hidden;
-		padding-bottom: 8px;
-		padding-right: 0;
 		margin-left: 0;
 	}
 
 	.brands__brand {
+		display: block;
 		width: 224px !important;
 		margin: 0;
 		margin-left: 22px;
@@ -194,26 +186,20 @@ body {
 	}
 }
 
-
 @media screen and (width >= 1120px) {
-
 	.brands-header {
 		padding: 16px 32px;
 		background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
 	}
 
-	.brands {
-		padding-right: 24px;
-	}
-
 	.swiper-wrapper {
-		padding: 32px;
-		padding-left: 0;
+		width: auto;
+		padding: 32px 32px 8px 0;
 		flex-wrap: wrap;
 		overflow-y: auto;
-		padding-bottom: 8px;
 		margin-left: 0;
-		padding-right: 0;
+		transform: none !important;
+		transition: none !important;
 	}
 
 	.brands__brand {
