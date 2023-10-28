@@ -1,0 +1,220 @@
+@font-face {
+	font-family: 'TT Lakes Regular';
+	src: url('fonts/TTLakes-Regular.eot');
+	src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/TTLakes-Regular.woff') format('woff'),
+	url('fonts/TTLakes-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TT Lakes Medium';
+	src: url('fonts/TTLakes-Medium.eot');
+	src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+	url('fonts/TTLakes-Medium.woff') format('woff'),
+	url('fonts/TTLakes-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}	
+
+body {
+	margin: 0;
+}
+
+.swiper-wrapper {
+	margin-left: 16px;
+}
+
+.brands-block {
+	background-color: #F8F8F8;
+	padding-bottom: 34px;
+}
+
+.brands-header {
+	box-shadow: 0px 3px 3px -2px rgba(0, 255, 255, 0.5) inset;
+	padding: 16px;
+	background-color: #FFF;
+	background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+}
+
+.brands-header__title {
+	margin: 0;
+	color: #7E7E82;
+	font-family: 'TT Lakes Regular';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-transform: uppercase;
+}
+
+
+
+.brand-cards__brand {
+	flex: none;
+	margin: 16px 0;
+	width: 240px !important;
+	height: 72px;
+	border-radius: 6px;
+	border: 1px solid #EAEAEA;
+	background-color: white;
+	background-repeat: no-repeat;
+}
+
+.brand-cards__btn {
+	display: block;
+	width: auto;
+	height: 72px;
+	background-image: url('images/go.svg');
+	background-repeat: no-repeat;
+	background-position: 184px 16px;
+}
+
+.brand-cards__brand--lenovo {
+	background-image: url('images/lenovo.svg');
+	background-position: 16px 20px;
+}
+
+.brand-cards__brand--samsung {
+	background-image: url('images/samsung.svg');
+	background-position: 16px 17px;
+}
+
+.brand-cards__brand--apple {
+	background-image: url('images/apple.svg');
+	background-position: 16px 12px;
+}
+
+.brand-cards__brand--viewsonic {
+	background-image: url('images/viewsonic.svg');
+	background-position: 14px 26px;
+}
+
+.brand-cards__brand--bosch {
+	background-image: url('images/bosch.svg');
+	background-position: 16px 21.7px;
+}
+
+.brand-cards__brand--hp {
+	background-image: url('images/hp.svg');
+	background-position: 10px 10px;
+}
+
+.brand-cards__brand--acer {
+	background-image: url('images/acer.svg');
+	background-position: 16px 24px;
+}
+
+.brand-cards__brand--sony {
+	background-image: url('images/sony.svg');
+	background-position: 14px 23px;
+}
+
+.swiper-pagination-bullet {
+	background: #DDDDDD;
+	width: 12px;
+	height: 12px;
+}
+
+.swiper-pagination {
+	position: static;
+	justify-content: center;
+}
+
+.swiper-pagination-bullet-active {
+	background: #B5B6BC;
+	width: 12px;
+	height: 12px;
+}
+
+.open-more {
+	width: 140px;
+	display: flex;
+	text-decoration: none;
+	margin-left: 24px;
+	background: url('images/expand.svg') no-repeat 0 0;
+}
+
+.open-more__text {
+	margin-left: 33px;
+	color: #1B1C21;
+	font-family: 'TT Lakes Medium';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+}
+
+.open-more--hidden {
+	display: none;
+}
+
+@media screen and (1120px > width >= 768px) {
+
+	.brands-header {
+		padding: 16px 24px;
+		background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+	}
+
+	.swiper-wrapper {
+		display: flex;
+		padding: 24px;
+		padding-left: 0;
+		flex-wrap: wrap;
+		overflow-y: auto;
+		padding-bottom: 8px;
+	}
+
+	.brand-cards__brand {
+		width: 224px;
+		margin: 0;
+		margin-left: 22px;
+		margin-bottom: 16px;
+	}
+
+	.brand-cards__btn {
+		background-position: 168px 16px;
+	}
+
+	.brand-cards__brand--hidden {
+		display: none;
+	}
+
+	.open-more--hidden {
+		display: inline-block;
+	}
+}
+
+
+@media screen and (width >= 1120px) {
+
+	.brands-header {
+		padding: 16px 32px;
+		background: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+	}
+
+	.swiper-wrapper {
+		padding: 32px;
+		padding-left: 0;
+		flex-wrap: wrap;
+		overflow-y: auto;
+		padding-bottom: 8px;
+	}
+
+	.brand-cards__brand {
+		margin: 0;
+		margin-left: 30px;
+		margin-bottom: 16px;
+	}
+
+	.brand-cards__brand--hidden {
+		display: none;
+	}
+
+	.open-more--hidden {
+		display: inline-block;
+	}
+}
